@@ -83,8 +83,8 @@ public class Product {
 
 
 	/**
-	 * Display inventory price
-	 * @return the amount of the inventory price which is quantity * price
+	 * Display inventory price for each product
+	 * @return the inventory price which is quantity * price
 	 */
 	public double getInventoryPrice() {
 		return quantity * price;

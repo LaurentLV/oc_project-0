@@ -29,18 +29,16 @@ public class ProductController {
 		model.addAttribute("prod", productService.product(id));
 		return "product";
 	}
-	
+
+	/**
+	 * Display the inventory total amount
+	 * @return The inventory total amount (of every products)
+	 */
 	private double calculateTotalInventoryAmount() {
-		// TODO Auto-generated method stub
-		// return 123456.78;
-		
 		double totalInventoryAmount = 0.0;
 		for (Product p : productService.products()) {
-			totalInventoryAmount+=p.getInventoryPrice();
+			totalInventoryAmount += p.getInventoryPrice();
 		}
-		
 		return totalInventoryAmount;
-		
-		
 	}
 }
