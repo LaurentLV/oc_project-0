@@ -52,11 +52,11 @@ public class Product {
 	}
 
     /**
-     * Display the quantity only if it's greater than or equal to zero (no negative number accepted)
+     * Display the quantity only if it's greater than or equal to zero (return 0 for negative number)
      * @param quantity
      */
 	public void setQuantity(int quantity) {
-        if (quantity >= 0) {
+        if (quantity > 0) {
             System.out.println(this.quantity = quantity);
         } else {
             System.out.println(0);
@@ -67,9 +67,20 @@ public class Product {
 		return price;
 	}
 
+    /**
+     * Display the price only if it's between 0 and 1000 (return 0 for negative number or 1000 for number >1000)
+     * @param price
+     */
 	public void setPrice(double price) {
-		this.price = price;
-	}
+        if (price > 0 && price <= 1000) {
+            System.out.println(this.price = price);
+        } else if (price > 1000) {
+            System.out.println(this.price = 1000);
+        } else {
+            System.out.println(0);
+        }
+    }
+
 
 	/**
 	 * Display inventory price
