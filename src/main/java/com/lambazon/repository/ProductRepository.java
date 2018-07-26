@@ -16,7 +16,7 @@ public class ProductRepository {
 	private static Map<Integer, Product> products = new HashMap<>();
 
 	/**
-	 * Display one more product : Belkin BOOST UP Qi
+	 * Display two more products : Belkin BOOST UP Qi and Willful SW331
 	 */
 
 	private static void generateProductData() {
@@ -27,6 +27,7 @@ public class ProductRepository {
 		products.put(++id, new Product(id, 40, 32.50, "VTech CS6114 DECT 6.0", "Cordless Phone"));
 		products.put(++id, new Product(id, 50, 895.00, "NOKIA OEM BL-5J", "Cell Phone "));
 		products.put(++id, new Product(id, 40, 51.99, "Belkin BOOST UP Qi", "Wireless Charging Pad "));
+		products.put(++id, new Product(id, 20, 89.99, "Willful SW331", "Smart watch "));
 	}
 	
 	public List<Product> products() {
