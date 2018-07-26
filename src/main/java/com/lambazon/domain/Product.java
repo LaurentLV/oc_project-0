@@ -1,7 +1,7 @@
 package com.lambazon.domain;
 
 public class Product {
-	
+
 	private Integer id;
 	private String name, description, details;
 	private int quantity;
@@ -51,9 +51,17 @@ public class Product {
 		return quantity;
 	}
 
+    /**
+     * Display the quantity only if it's greater than or equal to zero (no negative number accepted)
+     * @param quantity
+     */
 	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+        if (quantity >= 0) {
+            System.out.println(this.quantity = quantity);
+        } else {
+            System.out.println(0);
+        }
+    }
 
 	public double getPrice() {
 		return price;
@@ -71,3 +79,4 @@ public class Product {
 		return quantity * price;
 	}
 }
+
